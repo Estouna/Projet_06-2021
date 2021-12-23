@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='formulaires.css'/>
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+    <!--Sert à interdire le mode de compatibilité sur IE-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les formulaires</title>
+</head>
+<body>
+
+    
+<div class='container'>
+<h1 id='title'>Votre avis nous intéresse.</h1>
+<p id='description'>Merci de nous aider à améliorer freeCodeCamp.</p>
+
+<form id='survey-form'>
+
+    <fieldset>
+        <legend>Votre identité</legend>
+        <div class='groupform'>
+            <label for='name' id='name-label'>Votre nom :</label><br/>
+            <input class='casesNameMailAge' type='text' id='name' name='name' placeholder='Entrer votre nom' autofocus required/><br/>
+        </div>
+        <div class='groupform'>
+            <label for='surname' id='surname-label'>Votre prénom :</label><br/>
+            <input class='casesNameMailAge' type='text' id='surname' name='surname' placeholder='Entrer votre prénom' required/><br/>
+        </div>
+            <div class='groupform'>
+            <label for='email' id='email-label'>Votre email :</label><br/>
+            <input class='casesNameMailAge' type='email' id='email' name='email' placeholder='Entrer votre email' required/><br/>
+        </div>
+        <div class='groupform'>
+            <label for='number' id='number-label'>Votre âge (optionnel) :</label><br/>
+            <input class='casesNameMailAge' type='number' id='number' name='number' placeholder='Entrer votre âge' min='14' max='125'/><br/>
+        </div>
+
+        <P>Quelle est votre nationalité?</P>
+        <div class='groupform'>
+            <select class='casesAutres' name='pays' id='pays' required>
+                <optgroup label='Europe'>
+                    <option disable='' selected='' value=''>Indiquer votre nationalité</option>
+                    <option value='allemagne'>Allemagne</option>
+                    <option value='danemark'>Danemark</option>
+                    <option value='france'>France</option>
+                    <option value='espagne'>Espagne</option>
+                    <option value='italie'>Italie</option>
+                    <option value='autres-pays'>Autres pays d'Europe</option>
+                </optgroup>
+                <optgroup label="Amérique">
+                    <option value="canada">Canada</option>
+                    <option value="etats-unis">Etats-Unis</option>
+                </optgroup>
+                    <optgroup label="Asie">
+                    <option value="chine">Chine</option>
+                    <option value="japon">Japon</option>
+                </optgroup>
+            </select>
+        </div>
+  
+        <p>Quelle est votre situation actuelle?</p>
+        <div class='groupform'>
+            <select class='casesAutres' id='dropdown' name='role' required/>
+                <option disable='' selected='' value=''>Indiquer votre situation actuelle</option>
+                <option value='student'>Etudiant</option>
+                <option value=”job”>Travail à temps plein</option>
+                <option value=”formation”>En formation</option>
+                <option value=”preferNo”>Je préfère ne pas répondre</option>
+                <option value=”other”>Autres</option>
+            </select>
+        </div>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Votre avis et vos souhaits</legend>
+    <p>Recommenderiez-vous freeCodeCamp à vos amis</p>
+    <div class='groupform'>
+        <label>
+        <input class='inputRadCheck' name='user-recommend' value='absolument' type='radio' checked=''>Absolument 
+        </label><br/>
+        <label>
+        <input class='inputRadCheck' name='user-recommend' value='maybe' type='radio'>Peut-être
+        </label><br/>
+        <label>
+        <input class='inputRadCheck' name='user-recommend' value='not-sure' type='radio'>Pas sûr
+        </label><br/>
+    </div>
+
+    <p>Quelle est votre fonctionnalité préférée sur freeCodeCamp?</p>
+    <div class='groupform'>
+        <select class='casesAutres' id='most-like' name='mostlike' required/>
+            <option disable='' selected='' value=''>Sélectionner une option</option>
+            <option value='challenges'>Les challenges</option>
+            <option value='projects'>Les projets</option>
+            <option value='community'>La communauté</option>
+            <option value='opensource'>L'Open Source</option>
+        </select>
+    </div>
+
+    <p>Que souhaiteriez-vous voir améliorer? (Vous pouvez cocher plusieurs cases)</p>
+    <div class='groupform'>
+        <label>
+            <input class='inputRadCheck' name="prefer" value="front-end-projects" type="checkbox">Les projets front-end
+        </label><br/>
+        <label>
+            <input class='inputRadCheck' name="prefer" value="back-end-projects" type="checkbox">Les projets back-end
+        </label><br/>
+        <label>
+            <input class='inputRadCheck' name="prefer" value="data-visualization" type="checkbox">La visualisation des données
+        </label><br/>
+        <label>
+            <input class='inputRadCheck' name="prefer" value="challenges" type="checkbox">Les challenges
+        </label><br/>
+        <label>
+            <input class='inputRadCheck' name="prefer" value="open-source-community" type="checkbox">La communauté Open Source
+        </label><br/>
+        <label>
+            <input class='inputRadCheck' name="prefer" value="gitter-help-rooms" type="checkbox">Les Gitter help rooms
+        </label><br/>
+        <label>
+            <input class='inputRadCheck' name="prefer" value="videos" type="checkbox">Les vidéos
+        </label><br/>
+        <label>
+            <input class='inputRadCheck' name="prefer" value="city-meetups" type="checkbox">Les City Meetups
+        </label><br/>
+        <label>
+            <input class='inputRadCheck' name="prefer" value="wiki" type="checkbox">Le wiki
+        </label><br/>
+        <label>
+            <input class='inputRadCheck' name="prefer" value="forum" type="checkbox">Le forum
+        </label><br/>
+        <label>
+            <input class='inputRadCheck' name="prefer" value="additional-courses" type="checkbox">Des cours supplémentaires
+        </label><br/>
+    </div>
+
+        <p>Des commentaires ou des suggestions?</p>
+        <div class='groupform'>
+            <textarea class='comment' id="comments" name="comment" placeholder="Tapez votre commentaire ici..."></textarea>
+        </div>
+
+    </fieldset>
+
+        <div class='groupform'>
+            <button class='bouton-soumettre' type="submit" id="submit">Envoyer</button>
+        </div>
+  
+</form>
+</div>
+<br/>
+<br/>
+
+
+    
+</body>
+</html>
